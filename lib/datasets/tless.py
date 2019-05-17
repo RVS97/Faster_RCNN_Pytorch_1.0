@@ -298,6 +298,7 @@ class tless(imdb):
             self._devkit_path,
             'data',
             'ImageSets',
+            'Main',
             self._image_set + '.txt')
         cachedir = os.path.join(self._devkit_path, 'annotations_cache')
         aps = []
