@@ -16,6 +16,8 @@ import pprint
 import pdb
 import time
 
+import pandas as pd
+
 import torch
 from torch.autograd import Variable
 import torch.nn as nn
@@ -52,7 +54,7 @@ def parse_args():
                       default=10, type=int)
   parser.add_argument('--disp_interval', dest='disp_interval',
                       help='number of iterations to display',
-                      default=100, type=int)
+                      default=500, type=int)
   parser.add_argument('--checkpoint_interval', dest='checkpoint_interval',
                       help='number of iterations to display',
                       default=10000, type=int)
@@ -181,6 +183,8 @@ if __name__ == '__main__':
     cfg_from_file(args.cfg_file)
   if args.set_cfgs is not None:
     cfg_from_list(args.set_cfgs)
+
+  record = pd.DataFrame(columns=['epoch', 'iteration', 'loss_total', 'lr','timecost', 'loss_rpn_cls', 'loss_rpn_box', 'loss_rcnn_cls', 'loss_rcnn_box'])
 
   print('Using config:')
   pprint.pprint(cfg)
@@ -365,6 +369,20 @@ if __name__ == '__main__':
             'loss_rcnn_box': loss_rcnn_box
           }
           logger.add_scalars("logs_s_{}/losses".format(args.session), info, (epoch - 1) * iters_per_epoch + step)
+        new_row = {
+            'epoch': epoch,
+            'iteration': step,
+            'loss_total': loss_temp,
+            'lr':lr,
+            'timecost': round(end - start, 3),
+            'loss_rpn_cls': loss_rpn_cls,
+            'loss_rpn_box': loss_rpn_box,
+            'loss_rcnn_cls': loss_rcnn_cls,
+            'loss_rcnn_box': loss_rcnn_box
+        }
+
+        recordCSV = record.append(new_row, ignore_index=True)
+        recordCSV.to_csv('/content/drive/My\ Drive/Colab\ Notebooks/record.csv', index=0)
 
         loss_temp = 0
         start = time.time()
