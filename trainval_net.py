@@ -382,7 +382,7 @@ if __name__ == '__main__':
         }
 
         recordCSV = record.append(new_row, ignore_index=True)
-        recordCSV.to_csv(args.save_dir, index=0)
+        recordCSV.to_csv(os.path.join(args.save_dir,'record.csv'), index=0)
 
         loss_temp = 0
         start = time.time()
