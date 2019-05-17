@@ -382,7 +382,7 @@ if __name__ == '__main__':
         }
 
         recordCSV = record.append(new_row, ignore_index=True)
-        recordCSV.to_csv('/content/drive/My\ Drive/Colab\ Notebooks/record.csv', index=0)
+        recordCSV.to_csv('/content/drive/My Drive/Colab Notebooks/record.csv', index=0)
 
         loss_temp = 0
         start = time.time()
