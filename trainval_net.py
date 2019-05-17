@@ -381,8 +381,8 @@ if __name__ == '__main__':
             'loss_rcnn_box': loss_rcnn_box
         }
 
-        recordCSV = record.append(new_row, ignore_index=True)
-        recordCSV.to_csv(os.path.join(args.save_dir,'record.csv'), index=0)
+        record = record.append(new_row, ignore_index=True)
+        record.to_csv(os.path.join(args.save_dir,'record.csv'), index=0)
 
         loss_temp = 0
         start = time.time()
