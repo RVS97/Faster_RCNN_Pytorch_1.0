@@ -1,3 +1,6 @@
+Forked from: * [jwyang/faster-rcnn.pytorch](https://github.com/jwyang/faster-rcnn.pytorch)
+Only modified to adapt to T-LESS dataset
+
 # A *Faster* Pytorch Implementation of Faster R-CNN
 
 ## Introduction
