@@ -95,7 +95,7 @@ python demo.py --net vgg16 \
 
 Then you will find the detection results in folder $ROOT/images.
 
-You need to change the [line](https://github.com/RVS97/faster-rcnn.pytorch-pytorch-1.0/blob/530f3fdccaa60d05fa068bc2148695211586bd88/demo.py#L156) to adapt your own model.**
+You need to change the line 168 to adapt your own model.**
 
 
 ## Webcam Demo
