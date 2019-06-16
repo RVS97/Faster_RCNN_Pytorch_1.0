@@ -14,7 +14,7 @@ Only modified to adapt to T-LESS dataset.
 
 First of all, clone the code
 ```
-git clone https://github.com/RVS97/faster-rcnn.pytorch-pytorch-1.0.git
+git clone https://github.com/RVS97/Faster_RCNN_Pytorch_1.0.git
 ```
 
 Then, create a folder:
