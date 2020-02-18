@@ -30,7 +30,7 @@ cd faster-rcnn.pytorch && mkdir data
 
 ### Data Preparation
 
-* **T-LESS**: Please follow the instructions in [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to prepare VOC datasets. Then the strucuture of T-LESS should eb adapted to follow the same organisation. The network is implemented such that it is trained on synthetic data (eg, [debidatta](https://github.com/debidatta/syndata-generation)) and then be tested on the given test scenarios, all in the py-faster-rcnn format.
+* **T-LESS**: Please follow the instructions in [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to prepare VOC datasets. Then the strucuture of T-LESS should be adapted to follow the same organisation. The network is implemented such that it is trained on synthetic data (eg, [debidatta](https://github.com/debidatta/syndata-generation)) and then be tested on the given test scenarios, all in the py-faster-rcnn format.
 
 ### Pretrained Model
 
