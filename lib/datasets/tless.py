@@ -47,7 +47,11 @@ class tless(imdb):
             else devkit_path
         self._data_path = os.path.join(self._devkit_path, 'data')
         self._classes = ('__background__',  # always index 0
-                         'telco_switch' )
+                         't_less1', 't_less2', 't_less3', 't_less4', 't_less5', 't_less6',
+                         't_less7', 't_less8', 't_less9', 't_less10', 't_less11', 't_less12',
+                         't_less13', 't_less14', 't_less15', 't_less16', 't_less17', 't_less18',
+                         't_less19', 't_less20', 't_less21', 't_less22', 't_less23', 't_less24',
+                         't_less25', 't_less26', 't_less27', 't_less28', 't_less29', 't_less30' )
         self._class_to_ind = dict(zip(self.classes, xrange(self.num_classes)))
         self._image_ext = '.jpg'
         self._image_index = self._load_image_set_index()
